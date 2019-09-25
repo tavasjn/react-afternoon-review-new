@@ -15,36 +15,30 @@ class MainContent extends Component {
 
   handleNext = () => {
     console.log("hit function", this.state.i);
-    let iCopy = this.state.i;
+
     if (this.state.i === this.state.list.length - 1) {
       this.setState({
         i: 0
       });
     } else {
       this.setState({
-        i: iCopy + 1
+        i: this.state.i + 1
       });
     }
   };
 
   handlePrevious = () => {
-    let iCopy = this.state.i;
+
     if (this.state.i === 0) {
       this.setState({
         i: 24
       });
     } else {
       this.setState({
-        i: iCopy - 1
+        i: this.state.i - 1
       });
     }
   };
-
-  // handleChange = () => {
-  //   this.setState({
-  //     list:
-  //   })
-  // }
 
   handleEdit = () => {
     this.setState({ edit: !this.state.edit });
